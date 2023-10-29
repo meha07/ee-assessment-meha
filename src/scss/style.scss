@@ -1,0 +1,77 @@
+/* Common */
+.selected {
+    border: 1px solid grey;
+}
+
+// Product List Page
+.product-link {
+    text-decoration: none;
+}
+.product-pagination {
+    // width: fit-content;
+    // margin: 24px auto;
+}
+.product-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-list {
+    img {
+        width: 270px;
+        height: 270px;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+
+//Product Card Component
+.product-card {
+    .product-image {
+        // border: 1px solid red;
+    }
+    .product-description {
+        height: 100px;
+        text-align: left;
+        h3 {
+            color: rgba(0,0,0,.8);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+        p {
+            color: rgba(0,0,0,.5);
+            font-size: 16px;
+        }
+    }
+}
+.product-detail {
+    margin-top: 30px;
+    .back-button {
+        text-decoration: none;
+        color: rgba(0,0,0,.8);
+        svg {
+            vertical-align: middle;
+           
+            margin: 0 5px 3px 0;
+        }
+    }
+}
+.product-detail-abc {
+    display: flex;
+    max-width: 100%;
+    margin-top: 30px;
+    .product-detail-img {
+        margin-right: 30px;
+        img {
+            width: 500px;
+            height: 450px;
+        }
+    }
+    .product-rating-count {
+        vertical-align: super;
+    }
+}
