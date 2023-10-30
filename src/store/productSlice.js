@@ -15,15 +15,8 @@ const productSlice = createSlice({
       state.data = action.payload;
     },
     setCurrentPage: (state, action) => {
-      console.log("fvdsfvgsdvfgh", state, action);
       state.currentPage = action.payload;
     },
-    // selectProduct: (state, action) => {
-    //   state.selectedProduct = action.payload;
-    // },
-    // setPage: (state, action) => {
-    //   state.page = action.payload;
-    // },
     setSelectedProduct: (state, action) => {
       state.selectedProductId = action.payload;
     },

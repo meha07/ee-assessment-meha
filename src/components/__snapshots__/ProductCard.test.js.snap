@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductCard Component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="product-card"
+  >
+    <div
+      class="product-image"
+    >
+      <img
+        alt="Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin"
+        src="Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin"
+      />
+    </div>
+    <div
+      class="product-description"
+    >
+      <h3>
+        Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin
+      </h3>
+      <p>
+        $599
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;

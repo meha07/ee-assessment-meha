@@ -5,11 +5,9 @@ import BackButton from '../components/BackButton';
 import Container from '@mui/material/Container';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
-import { useNavigate } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { selectSelectedProductId } from '../selectors/productSelectors';
+import { useDispatch } from 'react-redux';
 import { setSelectedProduct  } from '../store/productSlice';
-import { Link } from 'react-router-dom';
+// import { useGetProductDetailQuery } from '../store/productdetailapi';
 
 
 const ProductDetailPage = () => {
@@ -17,11 +15,14 @@ const ProductDetailPage = () => {
   const [product, setProduct] = useState(null);
   const dispatch = useDispatch();
 
-
+  //console.log("Need to check why this is not working---", useGetProductDetailQuery());
+  
   const handleGoBack = () => {
     // Set Selected Product
-    console.log("dfbvdhvghdbvghfdbv", product.id);
-    dispatch(setSelectedProduct(product.id))
+    if (product) {
+      dispatch(setSelectedProduct(product.id))
+    }
+    
   };
 
   useEffect(() => {
@@ -41,12 +42,9 @@ const ProductDetailPage = () => {
 
   return (
     <div className="product-detail">
-      <Container fixed>
-        <BackButton />
-        <div onClick={handleGoBack}>
-          <Link to="/" className="back-button">
-           Back to Product List
-          </Link>
+      <Container>
+        <div className="back-button-wrapper" onClick={handleGoBack}>
+          <BackButton />
         </div>
         <div className="product-detail-abc">
           <div className="product-detail-img">
@@ -63,7 +61,6 @@ const ProductDetailPage = () => {
             <p>{product.description}</p>
           </div>
         </div>
-       
       </Container>
     </div>
   );

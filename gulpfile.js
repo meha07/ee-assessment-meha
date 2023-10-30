@@ -6,7 +6,7 @@ const cleanCSS = require('gulp-clean-css');
 const sourcePath = 'src/scss/**/*.scss';
 const destPath = 'src/css';
 
-function compileSass() {
+const compileSass = () => {
   return gulp
     .src(sourcePath)
     .pipe(sass().on('error', sass.logError))
@@ -15,7 +15,7 @@ function compileSass() {
     .pipe(gulp.dest(destPath));
 }
 
-function watch() {
+const watch = () => {
   gulp.watch(sourcePath, compileSass);
 }
 
