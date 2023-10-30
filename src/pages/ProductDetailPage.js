@@ -46,7 +46,7 @@ const ProductDetailPage = () => {
         <div className="back-button-wrapper" onClick={handleGoBack}>
           <BackButton />
         </div>
-        <div className="product-detail-abc">
+        <div className="product-detail-wrapper">
           <div className="product-detail-img">
             <img src={product.image} alt={product.title} />
           </div>
