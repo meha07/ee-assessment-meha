@@ -2,16 +2,14 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setProducts, setCurrentPage  } from '../store/productSlice';
-// import { fetchProducts } from '../api/productApi';
 import ProductCard from '../components/ProductCard';
 import Pagination from '@mui/material/Pagination';
 import { Link } from 'react-router-dom';
 import Container from '@mui/material/Container';
-// import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
-import { useGetProductsQuery } from '../store/api';
+import { useGetProductsQuery } from '../store/apiSlice';
 
 const ProductListPage = () => {
   const dispatch = useDispatch();
